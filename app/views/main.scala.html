@@ -1,23 +1,31 @@
-@*
- * This template is called from the `index` template. This template
- * handles the rendering of the page header and body tags. It takes
- * two arguments, a `String` for the title of the page and an `Html`
- * object to insert into the body of the page.
- *@
-@(title: String)(content: Html)
+@(title: String, description: String = "")(content: Html)
 
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        @* Here's where we render the page title `String`. *@
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
-    </head>
-    <body>
-        @* And here's where we render the `Html` object containing
-         * the page content. *@
-        @content
-    </body>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="@description">
+		<meta name="author" content="TLH Internet">
+
+		<title>@title</title>
+		<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.min.css")">
+
+		<link rel="shortcut icon" type="image/png" href="">
+			<!--[if IE]><link rel="shortcut icon" type="img/image/x-icon" href="" /><![endif]-->
+
+			<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+			<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script data-main="@routes.Assets.versioned("javascripts/main.js")" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+	</head>
+	<body>
+		@partials.nav()
+		@content
+		@partials.footer()
+	</body>
 </html>

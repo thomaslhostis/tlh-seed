@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/changeme -Dhttp.port=$PORT -Dconfig.resource=prod.conf
