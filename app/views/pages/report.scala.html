@@ -1,0 +1,23 @@
+@import com.tlhinternet.modules.report.models
+@(reportForm: Form[models.Report])
+
+@main("Signaler une anomalie • CHANGEME") {
+	<div class="main">
+		<div class="container">
+			<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+				<div class="info">
+					<div class="info-header text-center">
+						<!--<i class="fa fa-connectdevelop fa-5x"></i>-->
+						<h1>@Messages("tlhinternet.report.title")</h1>
+						<h4>@Messages("tlhinternet.report.subtitle")</h4>
+						<p>@Messages("tlhinternet.report.info")</p>
+					</div>
+					<div class="text-left">
+					@com.tlhinternet.modules.report.views.html.report(reportForm, routes.Report.submit())
+					</div>
+				</div>
+				<a href="@routes.Application.index()">Retour à l'accueil</a>
+			</div>
+		</div>
+	</div>
+}

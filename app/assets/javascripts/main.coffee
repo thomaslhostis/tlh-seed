@@ -43,6 +43,28 @@ requirejs.config
     froalaUrl: '//cdnjs.cloudflare.com/ajax/libs/froala-editor/2.3.4/js/plugins/url.min'
     froalaVideo: '//cdnjs.cloudflare.com/ajax/libs/froala-editor/2.3.4/js/plugins/video.min'
 
+    tlhConstants: '../lib/angular/tlh/constants'
+    tlhArrayUtils: '../lib/angular/tlh/utils/ArrayUtils'
+    tlhAwsUtils: '../lib/angular/tlh/utils/AwsUtils'
+    tlhDateUtils: '../lib/angular/tlh/utils/DateUtils'
+    tlhFileUtils: '../lib/angular/tlh/utils/FileUtils'
+    tlhFroalaUtils: '../lib/angular/tlh/utils/FroalaUtils'
+    tlhGridClassService: '../lib/angular/tlh/utils/GridClassService'
+    tlhImageUtils: '../lib/angular/tlh/utils/ImageUtils'
+    tlhNotifyUtils: '../lib/angular/tlh/utils/NotifyUtils'
+    tlhPositionUtils: '../lib/angular/tlh/utils/PositionUtils'
+    tlhScrollUtils: '../lib/angular/tlh/utils/ScrollUtils'
+    tlhOpenModal: '../lib/angular/tlh/modals/openModal'
+    tlhConfirmModal: '../lib/angular/tlh/modals/confirm/ConfirmModal'
+    tlhAdminToolbar: '../lib/angular/tlh/adminToolbar/adminToolbar'
+    tlhEditableContent: '../lib/angular/tlh/editable/content'
+    tlhEditableImage: '../lib/angular/tlh/editable/image'
+    tlhEditableLink: '../lib/angular/tlh/editable/link'
+    tlhEditableText: '../lib/angular/tlh/editable/text'
+    tlhS3Uploader: '../lib/angular/tlh/s3Uploader'
+    tlhNotification: '../lib/angular/tlh/Notification'
+    tlhFiltersFilesize: '../lib/angular/tlh/filters/filesize'
+
   shim:
     angular:
       exports: 'angular'
