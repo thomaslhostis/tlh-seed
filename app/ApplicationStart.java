@@ -1,11 +1,7 @@
-import com.avaje.ebean.Ebean;
 import play.Environment;
-import play.libs.Yaml;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.io.InputStream;
-import java.util.Collection;
 
 @Singleton
 public class ApplicationStart {

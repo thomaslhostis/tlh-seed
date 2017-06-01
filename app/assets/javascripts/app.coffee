@@ -3,62 +3,69 @@ define [
   'bootstrap'
   'angularBootstrap'
   'angularUiNotification'
+
   'tlhConstants'
-  'tlhArrayUtils'
-  'tlhAwsUtils'
-  'tlhDateUtils'
-  'tlhFileUtils'
-  'tlhFroalaUtils'
-  'tlhGridClassService'
-  'tlhImageUtils'
-  'tlhNotifyUtils'
-  'tlhPositionUtils'
-  'tlhScrollUtils'
-  'tlhOpenModal'
-  'tlhConfirmModal'
-  'tlhAdminToolbar'
-  'tlhEditableContent'
-  'tlhEditableImage'
-  'tlhEditableLink'
-  'tlhEditableText'
-  'tlhS3Uploader'
-  'tlhNotification'
+  'tlhComponentsAdminToolbar'
+  'tlhComponentsEditableContent'
+  'tlhComponentsEditableImage'
+  'tlhComponentsEditableLink'
+  'tlhComponentsEditableText'
+  'tlhComponentsModalConfirm'
+  'tlhComponentsOpenModal'
+  'tlhComponentsS3Uploader'
   'tlhFiltersFilesize'
+  'tlhFiltersPhone'
+  'tlhServicesArray'
+  'tlhServicesAws'
+  'tlhServicesConfirmModal'
+  'tlhServicesDate'
+  'tlhServicesFile'
+  'tlhServicesForm'
+  'tlhServicesFroala'
+  'tlhServicesGridClass'
+  'tlhServicesImage'
+  'tlhServicesNotification'
+  'tlhServicesNotifier'
+  'tlhServicesPicture'
+  'tlhServicesPosition'
+  'tlhServicesScroll'
 ], () ->
   'use strict'
 
-  angular
-  .module('app', [
-      'ui.bootstrap'
-      'ui-notification'
-      'tlhConstants'
-      'tlhArrayUtils'
-      'tlhAwsUtils'
-      'tlhDateUtils'
-      'tlhFileUtils'
-      'tlhFroalaUtils'
-      'tlhGridClassService'
-      'tlhImageUtils'
-      'tlhNotifyUtils'
-      'tlhPositionUtils'
-      'tlhScrollUtils'
-      'tlhOpenModal'
-      'tlhConfirmModal'
-      'tlhAdminToolbar'
-      'tlhEditableContent'
-      'tlhEditableImage'
-      'tlhEditableLink'
-      'tlhEditableText'
-      'tlhS3Uploader'
-      'tlhNotification'
-      'tlhFiltersFilesize'
-    ])
+  angular.module('app', [
+    'ui.bootstrap'
+    'ui-notification'
 
-  .config ['$animateProvider', ($animateProvider) ->
+    'tlhConstants'
+    'tlhComponentsAdminToolbar'
+    'tlhComponentsEditableContent'
+    'tlhComponentsEditableImage'
+    'tlhComponentsEditableLink'
+    'tlhComponentsEditableText'
+    'tlhComponentsModalConfirm'
+    'tlhComponentsOpenModal'
+    'tlhComponentsS3Uploader'
+    'tlhFiltersFilesize'
+    'tlhFiltersPhone'
+    'tlhServicesArray'
+    'tlhServicesAws'
+    'tlhServicesConfirmModal'
+    'tlhServicesDate'
+    'tlhServicesFile'
+    'tlhServicesForm'
+    'tlhServicesFroala'
+    'tlhServicesGridClass'
+    'tlhServicesImage'
+    'tlhServicesNotification'
+    'tlhServicesNotifier'
+    'tlhServicesPicture'
+    'tlhServicesPosition'
+    'tlhServicesScroll'
+
+  ]).config(['$animateProvider', ($animateProvider) ->
     $animateProvider.classNameFilter(/animate/)
-  ]
 
-  .config ['NotificationProvider', (NotificationProvider) ->
+  ]).config(['NotificationProvider', (NotificationProvider) ->
     NotificationProvider.setOptions
       delay: 6000,
       startTop: 20,
@@ -67,4 +74,4 @@ define [
       horizontalSpacing: 20,
       positionX: 'left',
       positionY: 'bottom'
-  ]
+  ])

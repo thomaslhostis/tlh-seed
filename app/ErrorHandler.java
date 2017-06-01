@@ -31,12 +31,12 @@ public class ErrorHandler extends com.tlhinternet.modules.errorhandler.ErrorHand
 		return error.render();
 	}
 
+	@Override
+	protected void notifyWebmaster(Http.RequestHeader request, UsefulException exception) {
+		mailerService.notifyWebmaster(request, exception);
+	}
+
 	/*protected CompletionStage onDevServerError(Http.RequestHeader request, UsefulException exception) {
 		return CompletableFuture.completedFuture(Results.internalServerError(getErrorTemplate()));
 	}*/
-
-	@Override
-	protected void warnWebmaster(final Http.RequestHeader request, final UsefulException exception) {
-		mailerService.warnWebmaster(request, exception);
-	}
 }
