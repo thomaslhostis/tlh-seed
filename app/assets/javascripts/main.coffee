@@ -69,7 +69,12 @@ requirejs.config
     tlhServicesPosition: '../lib/angular/tlh/services/position'
     tlhServicesScroll: '../lib/angular/tlh/services/scroll'
 
+    lightgallery: '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/js/lightgallery.min'
+    lightgalleryFullscreen: '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/js/lg-fullscreen.min'
+    lightgalleryThumbnail: '//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/js/lg-thumbnail.min'
+
     classie: '//cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min'
+    sidebarEffects: '../ext/sidebarEffects'
 
   shim:
     angular:
@@ -115,6 +120,10 @@ requirejs.config
     froalaUrl: ['froala']
     froalaVideo: ['froala']
 
-require ['app'], ->
+    lightgallery: ['jquery']
+    lightgalleryFullscreen: ['lightgallery']
+    lightgalleryThumbnail: ['lightgallery']
+
+require ['sidebarEffects', 'app'], ->
   angular.element(document).ready () ->
     angular.bootstrap(document, ['app'])
